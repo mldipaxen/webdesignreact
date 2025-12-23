@@ -1,0 +1,41 @@
+:root {
+  --green: #60d762;
+  --green-light: #4caf50;
+  --bg: #65a47a;
+  --card: #ffffff;
+  --text: #333;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(120deg, #e8f5e9, #f1f8e9);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.primary {
+  background: linear-gradient(90deg, var(--green), var(--green-light));
+  color: white;
+}
+
+button.primary:hover {
+  transform: translateY(-2px);
+}

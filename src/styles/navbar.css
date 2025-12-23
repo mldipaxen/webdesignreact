@@ -1,0 +1,79 @@
+.navbar {
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  color: white;
+  padding: 8px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  /* Плавные переходы */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Состояние при скролле */
+.navbar.scrolled {
+  background: linear-gradient(90deg, #1b5e20, #4caf50);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 6px 32px;
+}
+
+/* Убираем анимацию, так как Framer Motion управляет анимацией */
+/* .navbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+} */
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {}
+
+.navbar a {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid white;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background: white;
+  color: #2e7d32; /* Зеленый цвет вместо переменной */
+}
+
+/* Дополнительные медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .navbar a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

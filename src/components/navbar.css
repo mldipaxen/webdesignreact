@@ -1,0 +1,51 @@
+.navbar {
+  background: linear-gradient(90deg,#2e7d32,#66bb6a);
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  position: relative;
+}
+
+/* Ссылки с градиентной рамкой */
+.navbar a {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, #ffffff, #a5d6a7);
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover эффект с анимацией градиента */
+.navbar a:hover {
+  border-image-source: linear-gradient(90deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  transform: translateY(-2px);
+}
+
+/* Активная вкладка */
+.navbar a.active {
+  border-image-source: linear-gradient(90deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+}
